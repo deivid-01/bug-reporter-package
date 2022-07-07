@@ -5,13 +5,11 @@ namespace BugReporter
     [CreateAssetMenu(fileName = "APIClickUpConfig", menuName = "BugReporter/APIClickUpConfig", order = 0)]
     public class APIClickUpConfig : ScriptableObject
     {
-        [Header("API Config")] [SerializeField]
-        private string API_URL;
+        private string API_URL="https://api.clickup.com/api/v2";
+        
         [SerializeField] private string TOKEN;
-
         [Space]
         [SerializeField] private string LIST_ID;
-    
         [SerializeField] private string _taskParent;
 
         public string APIURL => API_URL;
